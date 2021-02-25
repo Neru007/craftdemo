@@ -89,10 +89,11 @@ As soon as cluster is ready, you should find a kubeconfig_{clustername} kubeconf
 
 ## Install AWS IAM authenticator so that Kubernetes can authenticate to cluster via IAM
 
+```bash
 curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/aws-iam-authenticator
 chmod +x ./aws-iam-authenticator
 mv aws-iam-authenticator /usr/local/bin/
-
+```
 
 # Deploy Kubectl and Sample Application that is created by docker file in app folder
 
