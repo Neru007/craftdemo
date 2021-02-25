@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "craftdemo-deployment"
+  namespace: "craftdemo"
+spec:
+  selector:
+    matchLabels:
+      app: "craftdemo"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "craftdemo"
+    spec:
+      containers:
+      - image: neru007/craftdemo:v1
+        imagePullPolicy: Always
+        name: "craftdemo"
+        ports:
+        - containerPort: 5000
